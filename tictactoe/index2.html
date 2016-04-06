@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+
+      <table >
+        <tr>
+          <!-- could also put classes on td's to codify x or o! -->
+          <td class="1 4 7"></td>
+          <td class="1 5"></td>
+          <td class="1 6 8"></td>
+        </tr>
+        <tr>
+          <!-- try numbering td's with id='a number' to make your jquery $(selectors) easier -->
+          <td class="2 4"></td>
+          <td class="2 5 7 8"></td>
+          <td class="2 6"></td>
+        </tr>
+        <tr>
+          <td class="3 4 8"></td>
+          <td class="3 5"></td>
+          <td class="3 6 7"></td>
+        </tr>
+      </table>
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+          var count = 0;
+          $('td').on('click', function(){
+            if(count % 2 === 0){
+              $(this).html("&#1002;");
+            } else {
+              $(this).html("&#510;");
+            }
+            count++;
+            checkBoard();
+          });
+
+          function checkBoard(){
+            //Check all 8 win conditions
+            //Try $('#1').text etc...
+            //Try $('.x') and loop over them
+            //Could store your 'win conditions' as arrays of integers!
+            //Alert the user if someone has won
+            //Check if all squares full or count === 9 is a tie!
+          }
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
